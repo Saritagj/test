@@ -15,8 +15,6 @@ def create(request):
         if request.method == 'POST':
             form = UserForm(request.POST,request.FILES)
             # form = UserForm(request.POST)
-            # print("-----------------------")
-            # print(form)
             # img_path = os.path.join(conf.TEMP_IMAGE_DIR, str(request.FILES))
             # f = request.FILES
 
@@ -40,9 +38,6 @@ def create(request):
                 print("$$$$$$$$$$$$$$")
         else:
             form = UserForm()
-            
-            print('_____________________________')
-            print(form)
 
         context = {'form':form}
         
